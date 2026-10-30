@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "db_id": "jadflat/CHGameMiSTer",
+  "timestamp": 1793323814,
+  "files": {
+    "_Console/CHGame_20261030.rbf": {
+      "hash": "f3d4a59689e687df0ce5776347a5ed9a",
+      "size": 3742964,
+      "url": "https://github.com/jadflat/CHGameMiSTer/releases/download/v0.5/CHGame_0.5_20261030.rbf"
+    }
+  },
+  "folders": {
+    "_Console/": {},
+    "games/CHGame/": {}
+  }
+}

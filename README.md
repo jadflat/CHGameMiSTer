@@ -11,6 +11,8 @@ The repository contains no games. Three free games by the core's author (CHix, S
 CHarth, MIT-licensed) come in the release zip's `games/CHGame/` folder and through an optional
 downloader file; any other `.CHG` and `.DAT` files are your own.
 
+**Links:** [CHGame website](https://chgame.website) · [Arduboy forum (CHGame)](https://community.arduboy.com/c/color/56) · [Buy a CHGame](https://www.arduboy.com/shop/p/chgame) · [CHGame API docs](https://bateske.github.io/CHGame/)
+
 ## The author's games
 
 | [CHix](https://github.com/jadflat/CHix) | [STARLIFT](https://github.com/jadflat/Starlift) | [CHarth](https://github.com/jadflat/CHarth) |

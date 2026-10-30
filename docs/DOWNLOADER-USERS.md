@@ -34,8 +34,24 @@ Each later update_all run fetches a new CHGame core when there is one.
   date).
 - The folder `games/CHGame/`, empty until you add games.
 
-It never installs games, `.DAT` files or saves. Add your own `.CHG` and `.DAT` files to
-`games/CHGame/` as before.
+It installs no games, `.DAT` files or saves. Add your own `.CHG` and `.DAT` files to
+`games/CHGame/` as before, or add the optional games below.
+
+## Optional: the author's games
+
+Three free games by the core's author can be installed the same way: CHix, STARLIFT (with
+its `STARLIFT.DAT`) and CHarth. Each is MIT-licensed and downloaded from its own repository's
+release. Add `downloader_chgame_games.ini` (in the release zip) to the top folder of the SD
+card, or these two lines:
+
+```ini
+[jadflat/CHGameMiSTer_games]
+db_url = https://raw.githubusercontent.com/jadflat/CHGameMiSTer/db/games.json.zip
+```
+
+The next update_all run puts `CHix.CHG`, `STARLIFT.CHG`, `STARLIFT.DAT` and `CHarth.CHG` in
+`games/CHGame/`, and updates them when new versions are released. Remove the file to stop.
+A game you already have under the same name is replaced.
 
 ## Remove it
 

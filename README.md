@@ -7,12 +7,15 @@ CHGame `.CHG` games.
 **Status: public beta (v0.5).** Every game tested runs at 100% speed on a DE10-Nano, over HDMI and
 on a 15 kHz analogue monitor. Expect rough edges; please report them.
 
-This repository contains no games. Bring your own `.CHG` and `.DAT` files.
+The repository contains no games. Three free games by the core's author (CHix, STARLIFT and
+CHarth, MIT-licensed) come in the release zip's `games/CHGame/` folder and through an optional
+downloader file; any other `.CHG` and `.DAT` files are your own.
 
 ## Install
 
 **With Downloader / update_all:** follow `docs/DOWNLOADER-USERS.md` (add the two-line
-`downloader_chgame.ini` to the top of the SD card, then run update_all).
+`downloader_chgame.ini` to the top of the SD card, then run update_all). Add
+`downloader_chgame_games.ini` too for the author's games.
 
 **By hand:** copy `CHGame_YYYYMMDD.rbf` to `_Console` (or `_Other`) on the MiSTer's SD card, keeping only
 one CHGame `.rbf` there. Put your games in `/media/fat/games/CHGame/`. Details: [INSTALL.md](INSTALL.md).
@@ -52,6 +55,9 @@ Version history: [CHANGELOG.md](CHANGELOG.md).
 - The emulator in `emu/` is joyrider3774's [chgame_emulator](https://github.com/joyrider3774/chgame_emulator) (MIT).
 - CHGame is by Kevin Bates ([bateske/CHGame](https://github.com/bateske/CHGame), Apache-2.0); its bootloader (MIT) is included as the factory flash image.
 - The MiSTer framework (`core/sys/`) is MiSTer-devel's Template_MiSTer (GPL).
+
+- CHix, STARLIFT and CHarth are by Jadflat ([CHix](https://github.com/jadflat/CHix),
+  [Starlift](https://github.com/jadflat/Starlift), [CHarth](https://github.com/jadflat/CHarth)), MIT; each uses Kevin Bates' CHGame library.
 
 See [NOTICE](NOTICE) for the full list.
 

@@ -54,6 +54,16 @@ mkdir -p "$STAGE/tools" "$STAGE/arm"
 cp "$RBF_OUT" "$STAGE/$(basename "$RBF_OUT")"
 for f in README.md INSTALL.md NOTICE LICENSE CHANGELOG.md; do cp "$f" "$STAGE/$f"; done
 cp tools/savconv.py "$STAGE/tools/savconv.py"
+cp docs/downloader_chgame.ini docs/downloader_chgame_games.ini "$STAGE/"
+# GAMES=folder: the author's games (tools/make_games_db.py lists them) into games/CHGame/
+if [ -n "${GAMES:-}" ]; then
+    mkdir -p "$STAGE/games/CHGame"
+    cp "$GAMES/CHix.CHG" "$STAGE/games/CHGame/CHix.CHG"
+    cp "$GAMES/Starlift.CHG" "$STAGE/games/CHGame/STARLIFT.CHG"
+    cp "$GAMES/STARLIFT.DAT" "$STAGE/games/CHGame/STARLIFT.DAT"
+    cp "$GAMES/CHarth.CHG" "$STAGE/games/CHGame/CHarth.CHG"
+    for g in CHix Starlift CHarth; do cp "$GAMES/LICENSE-$g.txt" "$STAGE/games/CHGame/"; done
+fi
 if [ -f build/chgsdimg.exe ]; then
     mkdir -p "$STAGE/build"; cp build/chgsdimg.exe "$STAGE/build/chgsdimg.exe"
     HAVE_SD=1

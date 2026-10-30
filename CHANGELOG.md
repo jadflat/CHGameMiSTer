@@ -10,6 +10,8 @@ First public beta. Every game tested runs at full speed on a DE10-Nano, over HDM
 ### Added
 
 - `LICENSE`: GPL-3.0-or-later.
+- The author's games CHix, STARLIFT and CHarth (MIT) in the release zip and through the
+  optional `downloader_chgame_games.ini`.
 
 ### Changed
 

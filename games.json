@@ -3,6 +3,11 @@
   "db_id": "jadflat/CHGameMiSTer_games",
   "timestamp": 1793332647,
   "files": {
+    "games/CHGame/CHarth.CHG": {
+      "hash": "a1eeb3a213414754d4645d5cfb809bc2",
+      "size": 29696,
+      "url": "https://github.com/jadflat/CHarth/releases/download/v1.0/CHarth.CHG"
+    },
     "games/CHGame/CHix.CHG": {
       "hash": "cf19795ddb4fa7f04d316773cd73e9b0",
       "size": 59392,
@@ -17,11 +22,6 @@
       "hash": "0b364389b43bf9f466a172525e8bd015",
       "size": 68096,
       "url": "https://github.com/jadflat/Starlift/releases/download/v0.24/STARLIFT.DAT"
-    },
-    "games/CHGame/CHarth.CHG": {
-      "hash": "a1eeb3a213414754d4645d5cfb809bc2",
-      "size": 29696,
-      "url": "https://github.com/jadflat/CHarth/releases/download/v1.0/CHarth.CHG"
     }
   },
   "folders": {

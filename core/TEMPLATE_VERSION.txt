@@ -1,0 +1,5 @@
+sys/ and rtl/pll* are from MiSTer-devel/Template_MiSTer (GPL-2.0; sys/hps_io.sv says GPL-3.0-or-later),
+unchanged except rtl/pll/pll_0002.v (output 96 MHz instead of 20 MHz).
+
+repository  https://github.com/MiSTer-devel/Template_MiSTer
+commit      5dda37366d02b04b8448da7b322235c1831af811 (2026-10-16)

@@ -1,0 +1,64 @@
+# The manual pass of tools/ss_audit.py: module  CLASS  regex-on-the-register-name.
+# First match wins per module.  CLASS: STATE saved as flops, MEM saved through a
+# second port, SCRATCH holds nothing at a safe point (or is a pure function of
+# state: registered outputs, read data, next-value copies, FSM and divider
+# registers), NOSAVE not state (docs/SAVESTATES.md 1.2), ROM.
+# Provisional (the CPU rework and the SPI/DMA rework are in progress): chg_cpu, chg_spi, chg_dma.
+
+# --- st7735 (the panel): the glass read-out (row, rstep, rs, rg, rend, rin, rr, v, r, g, b, vrgb, ...) is free-running
+st7735 MEM  gram
+st7735 STATE cmd|nparam|p0|p2|p4|xs|xe|ys|ye|cx|cy|writing|pix0|pix1|npix|madctl|colmod|sleeping|display_on|inverted|idle|partial|scrolling|psl|pel|tfa|vsa|ssa
+st7735 SCRATCH .*
+
+# --- audio: the 1000-cycle average, the DC blocker, the FIR history; the FIR pipeline is a function of them
+chg_audio MEM  hist
+chg_audio ROM  coef
+chg_audio STATE cyc|high|level|dc|hpos
+chg_audio SCRATCH .*
+
+# --- peripherals
+chg_systick STATE ctlr|sr|cmp|cmp_m1|cnt|pre|weird|wrap_left|pend
+chg_systick SCRATCH .*
+chg_tim STATE ctlr1|ctlr2|smcfgr|dmaintenr|chctlr1|chctlr2|ccer|psc|atrlr|rptcr|ccr1|ccr2|ccr3|ccr4|bdtr|dmacfgr|spec|uif|cnt|pcnt|pend|oc2_active
+chg_tim SCRATCH .*
+chg_gpio STATE cfg0|cfg1|cfg2|lckr|outdr|pcfr1|exticr0|exticr1|actlr|bz_hold
+chg_gpio SCRATCH .*
+chg_rcc STATE rcc|flags
+chg_rcc SCRATCH .*
+chg_adc STATE adc|noise|t|conv
+chg_adc SCRATCH .*
+chg_flashctl MEM  pbuf
+chg_flashctl STATE actlr|ctlr|faddr|eop|key1|mkey1|locked|fast_locked|pdef|pdval
+chg_flashctl SCRATCH .*
+chg_misc MEM  usb
+chg_misc MEM  io_dat
+chg_misc STATE usb_ok|io_tag|io_ok
+chg_misc SCRATCH .*
+chg_pfic MEM  pr0|pr1|pr2|pr3
+chg_pfic STATE enabled|pending|ithresdr|sctlr|vtf_addr0|vtf_addr1|vtf_addr2|vtf_addr3|vtf_id|depth_r|nest_r
+chg_pfic SCRATCH .*
+
+# --- SPI / DMA (provisional)
+chg_spi STATE ctlr1|ctlr2|crcr|hscr|statr_sticky|tx_full|tx_data|shifting|shift_data|shift_end|t|rx_full|rx_data|sd_selected|now|pa4_q|pb0_q|pb11_q|rst_q
+chg_spi SCRATCH .*
+chg_dma STATE cfgr|cntr|paddr|cmaddr|reload|pos|intfr|txp|rxp|swait
+chg_dma SCRATCH .*
+
+# --- the microSD side
+chg_sdspi STATE present|size|bstate|blba|bdrop|wr_pend|wr_busy|wbuf|wlba|idle|app|cmd0|cmd1|cmd2|cmd3|cmd4|ncmd|pre|npre|dk|pout|busy_resp|cur|reading|wstate|multi_write|nblk|lba|xs|xmosi|xout|xfrom_buf
+chg_sdspi SCRATCH .*
+# the .DAT card: option 1 of 1.3 saves nothing of it (idle at a safe point; the file's identity is in the header)
+chg_datcard NOSAVE len|nsec|data_end|last|name|valid|loaded|fin_len|hdr
+chg_datcard SCRATCH .*
+
+# --- the SoC glue; flash (reg [3:0][7:0] flash[16384]) is a memory
+chg_soc MEM  flash
+chg_soc STATE rst_level|lcd_reset|last_sd|stall_q|hold_bus
+chg_soc SCRATCH .*
+
+# --- the CPU (provisional: the rework changes this).  xr[0] stays 0: 32 bits less than the table says.
+# hpe_mem is the HPE stack, in the CPU (answers 1.1's open question)
+chg_cpu MEM  hpe_mem
+chg_cpu STATE xr|pc|mstatus|mtvec|mscratch|mepc|mcause|mtval|intsyscr|corecfgr|misc|depth|t_exc|t_irq|t_hpe|t_mepc|t_mcause|t_mst|wfi|lr_valid|lr_addr|rst_req|cyc|icount|frac|pair|recent0|recent1|recent2|owe
+chg_cpu SCRATCH .*
+chg_cpu_decode SCRATCH .*

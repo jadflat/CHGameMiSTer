@@ -1,0 +1,5 @@
+`verilator_config
+// core/sys/hps_io.sv (the MiSTer framework, unchanged) assigns wires in procedures inside its
+// PS2DIV branches, which Quartus takes; this core has PS2DIV = 0
+lint_off -rule PROCASSWIRE -file "*hps_io.sv"
+lint_off -rule PROCASSINIT

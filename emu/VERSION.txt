@@ -1,0 +1,5 @@
+emu/ is joyrider3774/chgame_emulator (MIT, see emu/LICENSE), src/ only, with the patches in PATCHES.md
+(main.c, the SDL front end, and gif.c left out).
+
+repository  https://github.com/joyrider3774/chgame_emulator
+commit      bb9baf5cbf15c7886574eaf1137ddb33612370e7

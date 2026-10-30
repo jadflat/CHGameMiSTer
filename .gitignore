@@ -1,0 +1,86 @@
+# Quartus outputs and scratch
+core/db/
+core/incremental_db/
+core/output_files/
+core/simulation/
+core/greybox_tmp/
+core/hc_output/
+core/.qsys_edit/
+core/hps_isw_handoff/
+core/sys/.qsys_edit/
+core/build_id.v
+core/c5_pin_model_dump.txt
+core/PLLJ_PLLSPE_INFO.txt
+core/*.srf
+core/*.qws
+*.qws
+*.ppf
+*.ddb
+*.sip
+*.spd
+*.sopcinfo
+*.rpt
+*.smsg
+*.summary
+*.done
+*.jdi
+*.pin
+*.sld
+*.sof
+*.cdf.bak
+*.bak
+*.orig
+*.rej
+*~
+
+# Simulation and local build output
+db/
+incremental_db/
+output_files/
+build/cputiming/
+build/cputiming/bak*/
+dist/card/
+sim/out/
+sim/out/
+build/
+*.exe
+*.pdb
+*.obj
+*.o
+*.vcd
+*.fst
+obj_dir/
+__pycache__/
+*.pyc
+
+# Release artefacts: published as GitHub Release assets, not in git
+# (if the Downloader db branch serves the .rbf from git, remove the *.rbf line there)
+dist/
+*.rbf
+*.zip
+
+# Games and card images: never publish (other people's data)
+*.img
+*.CHG
+*.chg
+*.DAT
+*.dat
+*.sav
+*.SAV
+*.hex.bak
+
+# Local notes and scratch files
+tools/install_quartus.sh
+tools/wait_downloads.sh
+PLAN.md
+docs/release/
+scratch/
+out/
+.claude/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# Keep: generated ROM files the core needs
+!core/rtl/*.hex

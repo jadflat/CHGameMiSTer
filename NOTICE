@@ -78,8 +78,8 @@ Games
   This repository contains no games. CHGame games (.CHG) and their data files (.DAT) belong
   to their authors.
 
-  The release zip's games/CHGame/ folder and the optional downloader database hold three games
-  by Jadflat, each under its own licence (the game's code, art and music MIT; the vendored
+  The release zip's games/CHGame/ folder and the optional downloader database hold games by
+  Jadflat (the database is rebuilt daily from the author's public releases), each under its own licence (the game's code, art and music MIT; the vendored
   CHGame library by Kevin Bates, Apache-2.0), with the licence beside it as LICENSE-<game>.txt:
     CHix      https://github.com/jadflat/CHix      (CHix.CHG)
     STARLIFT  https://github.com/jadflat/Starlift  (STARLIFT.CHG, STARLIFT.DAT)

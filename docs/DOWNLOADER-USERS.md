@@ -39,9 +39,10 @@ It installs no games, `.DAT` files or saves. Add your own `.CHG` and `.DAT` file
 
 ## Optional: the author's games
 
-Three free games by the core's author can be installed the same way: CHix, STARLIFT (with
-its `STARLIFT.DAT`) and CHarth. Each is MIT-licensed and downloaded from its own repository's
-release. Add `downloader_chgame_games.ini` (in the release zip) to the top folder of the SD
+The core's author's free games can be installed the same way: at present CHix, STARLIFT
+(with its `STARLIFT.DAT`) and CHarth. Each is downloaded from its own repository's release,
+under its own licence. The list is rebuilt every day, so new games and new versions arrive
+with the next update_all run. Add `downloader_chgame_games.ini` (in the release zip) to the top folder of the SD
 card, or these two lines:
 
 ```ini
@@ -49,8 +50,9 @@ card, or these two lines:
 db_url = https://raw.githubusercontent.com/jadflat/CHGameMiSTer/db/games.json.zip
 ```
 
-The next update_all run puts `CHix.CHG`, `STARLIFT.CHG`, `STARLIFT.DAT` and `CHarth.CHG` in
-`games/CHGame/`, and updates them when new versions are released. Remove the file to stop.
+The next update_all run puts the games (`CHix.CHG`, `STARLIFT.CHG`, `STARLIFT.DAT`,
+`CHarth.CHG`, and any added later) in `games/CHGame/`, and updates them when new versions
+are released. Remove the file to stop.
 A game you already have under the same name is replaced.
 
 ## Remove it

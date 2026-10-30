@@ -11,6 +11,14 @@ The repository contains no games. Three free games by the core's author (CHix, S
 CHarth, MIT-licensed) come in the release zip's `games/CHGame/` folder and through an optional
 downloader file; any other `.CHG` and `.DAT` files are your own.
 
+## The author's games
+
+| [CHix](https://github.com/jadflat/CHix) | [STARLIFT](https://github.com/jadflat/Starlift) | [CHarth](https://github.com/jadflat/CHarth) |
+|:---:|:---:|:---:|
+| ![CHix](docs/games/chix.gif) | ![STARLIFT](docs/games/starlift.gif) | ![CHarth](docs/games/charth.gif) |
+
+New public releases by the author are added to the optional games download automatically.
+
 ## Install
 
 **With Downloader / update_all:** follow `docs/DOWNLOADER-USERS.md` (add the two-line

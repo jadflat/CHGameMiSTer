@@ -1,17 +1,37 @@
 {
   "v": 1,
   "db_id": "jadflat/CHGameMiSTer_games",
-  "timestamp": 1793621980,
+  "timestamp": 1793880975,
   "files": {
     "games/CHGame/CHarth.CHG": {
       "hash": "a1eeb3a213414754d4645d5cfb809bc2",
       "size": 29696,
       "url": "https://github.com/jadflat/CHarth/releases/download/v1.0/CHarth.CHG"
     },
+    "games/CHGame/BADAPPL1.DAT": {
+      "hash": "98a7af9b040f18cd788195d5f27fd311",
+      "size": 20185088,
+      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5/BADAPPL1.DAT"
+    },
+    "games/CHGame/BAD APPLE.CHG": {
+      "hash": "5ac2cad1fb8dfb61300b5478863f1d9c",
+      "size": 44544,
+      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5/BADAPPLE.CHG"
+    },
+    "games/CHGame/BADAPPLE.DAT": {
+      "hash": "5954908b6c3eb7b5042f2245e57ffbc0",
+      "size": 40369664,
+      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5/BADAPPLE.DAT"
+    },
     "games/CHGame/CHix.CHG": {
       "hash": "cf19795ddb4fa7f04d316773cd73e9b0",
       "size": 59392,
       "url": "https://github.com/jadflat/CHix/releases/download/v1.2.3/CHix.CHG"
+    },
+    "games/CHGame/SAVE MANAGER.CHG": {
+      "hash": "8b84d4ffe314195d22e30f13bdd079f5",
+      "size": 59904,
+      "url": "https://github.com/jadflat/CHSaveMan/releases/download/v0.21/SAVEMAN.CHG"
     },
     "games/CHGame/STARLIFT.CHG": {
       "hash": "45c03ff5e3d1b9bc9b756c849d2ebc6f",

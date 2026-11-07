@@ -4,7 +4,7 @@ A MiSTer FPGA core for the CHGame handheld (WCH CH32X035 RISC-V chip, 128 x 128 
 piezo buzzer, microSD card). It reproduces the board cycle for cycle in the FPGA and plays
 CHGame `.CHG` games.
 
-**Status: public beta (v0.5).** Every game tested runs at 100% speed on a DE10-Nano, over HDMI and
+**Status: public beta (v0.6).** Every game tested runs at 100% speed on a DE10-Nano, over HDMI and
 on a 15 kHz analogue monitor. Expect rough edges; please report them.
 
 The repository contains no games. Three free games by the core's author (CHix, STARLIFT and

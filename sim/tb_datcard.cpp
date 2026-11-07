@@ -12,6 +12,9 @@
 //   sim/out/datcard/datcard.exe step op...
 //     op: "clear" (Clear data files) or "file.DAT NAME.DAT" (a load)
 // e.g. datcard.exe 1 STARLIFT.DAT STARLIFT.DAT DANKTOMB.DAT DANKTOMB.DAT clear RASTAN.DAT RASTAN.DAT
+// "<4>CARD" headers (v0.6): datcard.exe 1 CHIX.DAT CHIX.DAT WILDHAND.DAT WILDHAND.DAT CHFT.DAT CHFIGHT.DAT
+//   (CHIX.DAT begins "CHIXCARD", WILDHAND.DAT "WILDHAND", CHFT.DAT any file beginning "CHFTCARD");
+//   CHIX.DAT CHIXCARD.DAT must FAIL (the v0.5 name).
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>

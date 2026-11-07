@@ -2,6 +2,16 @@
 
 All notable changes to CHGameMiSTer, newest first.
 
+## 0.6 (2026-11-07)
+
+### Fixed
+
+- Load data file: a `.DAT` whose header is `<4 characters>CARD` is now put on the card under
+  those 4 characters, so CHix's `CHIX.DAT` (header `CHIXCARD`) is found as `CHIX.DAT` (it was
+  `CHIXCARD.DAT`, and CHix said NEED CHIX.DAT). CHFight's `CHFTCARD` is `CHFIGHT.DAT`;
+  `ECRTCARD` is still `CRITTERS.DAT`. Files that begin with their own name (STARLIFT,
+  WILDHAND, DANKTOMB, ANOTHERW, RASTAN) are named as before.
+
 ## 0.5 (2026-10-30)
 
 First public beta. Every game tested runs at full speed on a DE10-Nano, over HDMI and on a

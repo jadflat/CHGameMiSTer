@@ -101,7 +101,7 @@ localparam CONF_STR = {
 	"J1,B,A,Start,Select,FF,Up;",
 	"jn,A,B,Select,Start,R,X;",
 	"v,0;",
-	"V,v0.5-",`BUILD_DATE
+	"V,v0.6-",`BUILD_DATE
 };
 
 wire         forced_scandoubler;

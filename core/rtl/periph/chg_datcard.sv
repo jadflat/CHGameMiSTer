@@ -25,7 +25,9 @@
 // its name, so the name comes from the file itself: CHGame .DAT files begin with their name
 // (STARLIFT, DANKTOMB, ANOTHERW; RASTAN padded with zeros). The name is the first bytes up
 // to 8 that may stand in an 8.3 name (letters made capitals); the extension is DAT. Ethan's
-// Critters' card format begins with its magic "ECRTCARD" instead; that file is CRITTERS.DAT.
+// Critters' card format begins with its magic "ECRTCARD" instead; that file is CRITTERS.DAT
+// (and CHFight's "CHFTCARD" is CHFIGHT.DAT). Any other "<4 characters>CARD" is the 4 characters
+// (CHix's "CHIXCARD" is CHIX.DAT).
 // A file with no name at its start is CARD.DAT.
 //
 // Adding a file whose name is already on the card REPLACES that file (the card then holds the
@@ -182,6 +184,9 @@ function [63:0] name_of(input [63:0] h);
 		if (go) name_of[8 * i +: 8] = c;
 	end
 	if (h == "DRACTRCE") name_of = "SRETTIRC";       // "ECRTCARD" byte 0 first: CRITTERS
+	else if (h == "DRACTFHC") name_of = " THGIFHC";  // "CHFTCARD": CHFIGHT
+	else if (h[63:32] == "DRAC" && sfn(h[7:0]) != 0 && sfn(h[15:8]) != 0 && sfn(h[23:16]) != 0 && sfn(h[31:24]) != 0)
+		name_of = {32'h20202020, sfn(h[31:24]), sfn(h[23:16]), sfn(h[15:8]), sfn(h[7:0])};   // "<4 letters>CARD": "CHIXCARD" is CHIX
 	else if (sfn(h[7:0]) == 0) name_of = "    DRAC";  // CARD
 endfunction
 

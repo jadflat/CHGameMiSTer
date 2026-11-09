@@ -1,7 +1,7 @@
 {
   "v": 1,
   "db_id": "jadflat/CHGameMiSTer_games",
-  "timestamp": 1794136522,
+  "timestamp": 1794228505,
   "files": {
     "games/CHGame/CHarth.CHG": {
       "hash": "a1eeb3a213414754d4645d5cfb809bc2",
@@ -11,17 +11,17 @@
     "games/CHGame/BADAPPL1.DAT": {
       "hash": "98a7af9b040f18cd788195d5f27fd311",
       "size": 20185088,
-      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5/BADAPPL1.DAT"
+      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5.1/BADAPPL1.DAT"
     },
     "games/CHGame/BAD APPLE.CHG": {
-      "hash": "5ac2cad1fb8dfb61300b5478863f1d9c",
+      "hash": "0f1f8267ed4dd598650a17ab7c617288",
       "size": 44544,
-      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5/BADAPPLE.CHG"
+      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5.1/BADAPPLE.CHG"
     },
     "games/CHGame/BADAPPLE.DAT": {
       "hash": "5954908b6c3eb7b5042f2245e57ffbc0",
       "size": 40369664,
-      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5/BADAPPLE.DAT"
+      "url": "https://github.com/jadflat/CHBadApple/releases/download/v0.5.1/BADAPPLE.DAT"
     },
     "games/CHGame/CHix.CHG": {
       "hash": "1c0218b3084bced9ba4489bbef016b1d",

@@ -1,7 +1,7 @@
 {
   "v": 1,
   "db_id": "jadflat/CHGameMiSTer_games",
-  "timestamp": 1794228505,
+  "timestamp": 1794397858,
   "files": {
     "games/CHGame/CHarth.CHG": {
       "hash": "a1eeb3a213414754d4645d5cfb809bc2",
@@ -49,14 +49,14 @@
       "url": "https://github.com/jadflat/CHWildHand/releases/download/v1.3.33/WILDHAND.DAT"
     },
     "games/CHGame/STARLIFT.CHG": {
-      "hash": "d8df8d3a666a40023ea26a8e072ce823",
+      "hash": "05c5141c97211e06d9463eb7c76e5e73",
       "size": 59904,
-      "url": "https://github.com/jadflat/Starlift/releases/download/v0.43/Starlift.CHG"
+      "url": "https://github.com/jadflat/Starlift/releases/download/v0.46/Starlift.CHG"
     },
     "games/CHGame/STARLIFT.DAT": {
-      "hash": "a33297155fb3c1230470113ed76305e9",
-      "size": 68096,
-      "url": "https://github.com/jadflat/Starlift/releases/download/v0.43/STARLIFT.DAT"
+      "hash": "59a1b09e4cb4973b7d936e22189677bf",
+      "size": 71168,
+      "url": "https://github.com/jadflat/Starlift/releases/download/v0.46/STARLIFT.DAT"
     }
   },
   "folders": {
